@@ -314,6 +314,17 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     print("🔵 Base Wallet Bot Starting...")
     
+    # Validate environment variables
+    if not TELEGRAM_TOKEN:
+        print("❌ ERROR: TELEGRAM_TOKEN environment variable is not set!")
+        print("Please set it in Railway Variables tab.")
+        return
+    
+    if not ETHERSCAN_API_KEY:
+        print("❌ ERROR: ETHERSCAN_API_KEY environment variable is not set!")
+        print("Please set it in Railway Variables tab.")
+        return
+    
     app = Application.builder().token(TELEGRAM_TOKEN).build()
     
     # Add handlers
