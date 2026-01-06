@@ -101,3 +101,4 @@ Since this bot needs to run 24/7, you need hosting:
 ✅ Etherscan API - Free
 ✅ DexScreener API - Free
 ✅ Hosting - Free tier available
+# bt
